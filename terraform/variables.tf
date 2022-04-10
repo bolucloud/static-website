@@ -30,10 +30,10 @@ variable "bucket_name" {
 
 variable "common_tags" {
   description = "common tags that will be applied to components"
-  default     = ""
+  default     = {}
 }
 
 variable "domain_name" {
   type    = string
-  default = ""
+  default = "staticwebsite.bolu.cloud"
 }
