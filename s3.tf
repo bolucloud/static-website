@@ -20,3 +20,8 @@ resource "aws_s3_bucket_acl" "static-website-bucket-acl" {
   bucket = aws_s3_bucket.static-website-bucket.id
   acl    = "public-read"
 }
+
+resource "aws_s3_bucket_policy" "website_policy" {
+  bucket = aws_s3_bucket.static-website-bucket.id
+  policy = data.aws_iam_policy_document.website_policy.json
+}
