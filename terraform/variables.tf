@@ -24,13 +24,16 @@ variable "AWS_SECRET_ACCESS_KEY" {
 }
 
 variable "bucket_name" {
-  type = string
+  type    = string
+  default = ""
 }
 
 variable "common_tags" {
   description = "common tags that will be applied to components"
+  default     = ""
 }
 
 variable "domain_name" {
-  type = string
+  type    = string
+  default = ""
 }
